@@ -5,7 +5,7 @@ const successHandle = require("../services/successHandle");
 const uploads = {
   async uploadImage(req, res, next) {
     if (!req.files.length) {
-      return next(errorHandle(400, "尚未上傳檔案", next));
+      return next(errorHandle(400, "請選擇要上傳的檔案", next));
     }
 
     const dimensions = sizeOf(req.files[0].buffer);
