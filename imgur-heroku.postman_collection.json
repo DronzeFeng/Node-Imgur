@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "db2af7e4-0450-4400-b297-489d074e3cb1",
+		"name": "imgur-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20339003"
+	},
+	"item": [
+		{
+			"name": "註冊",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@gmail.com\", \n    \"password\":\"1234rewq\", \n    \"confirmPassword\":\"1234rewq\", \n    \"name\":\"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://radiant-chamber-19674.herokuapp.com/users/sign_up",
+					"protocol": "https",
+					"host": [
+						"radiant-chamber-19674",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "上傳圖片",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTE1NmZjODEwN2UzZjY5ZGJjZmY3NiIsImlhdCI6MTY1NDc0MDczMiwiZXhwIjoxNjU1MzQ1NTMyfQ.gGOCt43rZqR8RyyVlKmFjEcZ6Prr5em0Jx_s34mSY9U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/joseph/Desktop/1x1.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://radiant-chamber-19674.herokuapp.com/upload",
+					"protocol": "https",
+					"host": [
+						"radiant-chamber-19674",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
